@@ -12,13 +12,16 @@ def registrarContacto(id):
     
     return contacto
 
-def imprimirContacto(contacto):
+def imprimirDirectorio():
     tpl=":key: :value\t"
     msj=""
     print("\nDIRECTORIO TELEFONICO")
-    for key in contacto.keys():
-        msj += tpl.replace(":key",key).replace(":value", contacto[key])
-    print(msj)
+    for contacto in directorio:
+
+        for key in contacto.keys():
+            msj += tpl.replace(":key",key).replace(":value", contacto[key])
+    
+    print(msj+"\n")
   
 def llenarDirectorio():
     if directorio:
@@ -37,15 +40,25 @@ def agregaralDirectorio():
     directorio.append(contacto)
  
 
+def modificarContacto ():
+    imprimirDirectorio()
+    id=int(input("Ingrese el Id del usuario que desea editar:\n"))
+    contacto=registrarContacto(id)
+    directorio[id-1]=contacto
+
+
+
+
+
 
 
 
 #pruebas
 
 llenarDirectorio()
+modificarContacto()
+imprimirDirectorio()
 
-for contacto in directorio:
-    imprimirContacto(contacto)
 
 
 
