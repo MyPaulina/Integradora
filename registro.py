@@ -1,3 +1,10 @@
+'''cree un directorio telefonico que conserve los siguientes datos 
+(ID, nombre, apellido paterno, apellido materno, teléfono, correo)
+1) Carga de datos e imprimirlos
+2) Coloque como índice o clave el ID del contacto para identificarlo
+3) Modificar cualquiera de los datos de un contacto solo si se requiere
+4) Muestre los cambios realizados'''
+
 directorio=[]
 
 def registrarContacto(id):
@@ -9,7 +16,6 @@ def registrarContacto(id):
         telefono=input("Ingrese el teléfono:"),
         email=input("Ingrese el email:")
     )
-    
     return contacto
 
 def imprimirDirectorio():
@@ -17,10 +23,8 @@ def imprimirDirectorio():
     msj=""
     print("\nDIRECTORIO TELEFONICO")
     for contacto in directorio:
-
         for key in contacto.keys():
             msj += tpl.replace(":key",key).replace(":value", contacto[key])
-    
     print(msj+"\n")
   
 def llenarDirectorio():
@@ -47,8 +51,30 @@ def modificarContacto ():
     directorio[id-1]=contacto
 
 
+def nyz():
+    contacto=directroio[0]
+    for key in contacto.keys():
+        
 
 
+
+
+
+for key in lista: 
+    print(key +" "+ diccionario [key])
+
+diccionario ["Edad"]=str(input("\nModifica la edad: "))
+for key in lista: 
+    print(key +" "+ diccionario [key])
+    
+diccionario ["Altura"]=str(input("Modifica la altura: "))
+print()
+for key in lista: 
+    print(key +" "+ diccionario [key])
+    
+
+mytuple = tuple(lista)
+print(mytuple)
 
 
 
@@ -58,6 +84,9 @@ def modificarContacto ():
 llenarDirectorio()
 modificarContacto()
 imprimirDirectorio()
+
+nyz()
+
 
 
 
